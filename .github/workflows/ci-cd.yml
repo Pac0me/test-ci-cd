@@ -28,5 +28,5 @@ jobs:
     
     - name: Push to Docker Hub
       run: |
-        docker tag myapp:${{ github.sha }} ${{ secrets.DOCKER_USERNAME }}/myapp:latest
-        docker push ${{ secrets.DOCKER_USERNAME }}/myapp:latest
+        docker tag test-ci-cd ${{ secrets.DOCKER_USERNAME }}/test-ci-cd:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/test-ci-cd:latest

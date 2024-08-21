@@ -66,5 +66,5 @@ jobs:
           sudo docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/test-ci-cd
           sudo docker stop test-ci-cd || true
           sudo docker rm test-ci-cd || true
-          sudo docker run -d --name test-ci-cd -p 80:80 test-ci-cd
+          sudo docker run -d --name test-ci-cd -p 80:80 ${{ secrets.DOCKER_HUB_USERNAME }}/test-ci-cd
         EOF
